@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=1024, user-scalable=no">
+    
+    <title>Keyframes Crash Course</title>
+    
+    <!-- Required stylesheet -->
+    <link rel="stylesheet" media="screen" href="core/deck.core.css">
+    
+    <!-- Extension CSS files go here. Remove or add as needed. -->
+    <link rel="stylesheet" media="screen" href="extensions/goto/deck.goto.css">
+    <link rel="stylesheet" media="screen" href="extensions/menu/deck.menu.css">
+    <link rel="stylesheet" media="screen" href="extensions/navigation/deck.navigation.css">
+    <link rel="stylesheet" media="screen" href="extensions/status/deck.status.css">
+    <link rel="stylesheet" media="screen" href="extensions/scale/deck.scale.css">
+    
+    <!-- Style theme. More available in /themes/style/ or create your own. -->
+    <link rel="stylesheet" media="screen" href="themes/style/web-2.0.css">
+    
+    <!-- Transition theme. More available in /themes/transition/ or create your own. -->
+    <link rel="stylesheet" media="screen" href="themes/transition/horizontal-slide.css">
+    
+    <!-- Basic black and white print styles -->
+    <link rel="stylesheet" media="print" href="core/print.css">
+    
+    <link rel="stylesheet" media="screen" href="styles.css">
+    
+    <link href="https://fonts.googleapis.com/css?family=Merriweather|Open+Sans" rel="stylesheet">
+    
+    <!-- Required Modernizr file -->
+    <script src="modernizr.custom.js"></script>
+</head>
+<body>
+    <div class="deck-container">
+        
+        <!-- Begin slides. Just make elements with a class of slide. -->
+        
+        <section class="slide">
+            <h1>Intro to CSS Transitions, </br>Transforms and Keyframes</h1>
+        </section>
+        
+        <section class="slide">
+            <h1>Introductions</h1>
+            <img src='https://media.giphy.com/media/vFKqnCdLPNOKc/giphy.gif'/>
+            <ul>
+                <li>What's your name?</li>
+                <li>Experience with CSS and/or animation?</li>
+                <li>Anything you're hoping to learn?</li>
+            </ul>
+        </section>
+        
+        <section class="slide">
+            <h1>Tonight's Agenda</h1>
+            <ol>
+                <li>CSS Transitions</li>
+                <li>CSS Transforms</li>
+                <li>@keyframes Rule</li>
+                <li>Create loader animation!</li>
+                <li>Initialize it with JavaScript</li>
+            </ol>
+        </section>
+        
+        <section class='slide'>
+            <h2>How to Trigger a Change</h2>
+            <img src="https://media.giphy.com/media/UUoV0yMKiO24M/giphy.gif"/>
+            <ul>
+                <li>Hover</li>
+                <li>Form or button focus</li>
+                <li>Active or visited links</li>
+                <li>JavaScript Event (ex: click, window load)</li>
+            </ul>
+        </section>
+        
+        <section class='slide'>
+            <h1>CSS Hover Psuedo Selector</h1>
+            <img src="https://media.giphy.com/media/aNFmxymFRQzi8/giphy.gif"/>
+            <ul>
+                <li>The change happens immediately</li>
+                <li>No control over speed, duration, etc.</li>
+            </ul>
+        </section>
+        
+        <section class='slide'>
+            <h2>Transition Properties</h2>
+            <img src='https://media.giphy.com/media/bU6GKBpWaJ4tO/giphy.gif'/>
+            <ul>
+                <li>Transition Delay</li>
+                <li>Transition Duration</li>
+                <li>Transition Property</li>
+                <li>Transition Timing Function</li>
+            </ul>
+        </section>
+        
+        <section class='slide'>
+            <h2><strong>Transition Delay</strong> - Delays the animation</h2>
+            <h2><strong>Transition Duration</strong> - Sets how long it will take the animation to complete</h2>
+        </section>
+        
+        <section class='slide'>
+            <h2>Transition Property</h2>
+            <ul>
+                <li>The name of the property you want to transition</li>
+                <li>Helpful when transitioning multiple properties</li>
+                <li>Default value is "all"</li>
+            </ul>
+        </section>
+        
+        <section class='slide'>
+            <h2>Transition Timing Function</h2>
+            <img src='https://media.giphy.com/media/OQSvUTF3ONkIg/giphy.gif'/>
+            <ul>
+                <li>Determines the in-between steps of the animation</li>
+                <li>Default value is "ease"</li>
+                <li><a href='https://cssreference.io/property/transition-timing-function/' target='_blank'>Examples</a></li>
+                <li><a href='http://cubic-bezier.com/#.17,.67,.83,.67' target='_blank'>Cubic Bezier</a></li>
+            </ul>
+        </section>
+        
+        <section class='slide'>
+            <h2>Transition Shorthand</h2>
+            <p>property, duration, timing-function, delay</p>
+            <code>
+                transition: color, 2s, ease-in-out , 1s
+            </code>
+            <p>The only mandatory property is transition-duration!</p>
+        </section>
+        
+        <section class='slide'>
+            <h1>Transform Properties</h1>
+            <img src='https://media.giphy.com/media/SyqfOzwy6tZug/giphy.gif'/>
+            <ul>
+                <li><a href='https://developer.mozilla.org/en-US/docs/Web/CSS/transform'>Complete List</a></li>
+                <li>Rotate</li>
+                <li>Scale</li>
+                <li>Translate</li>
+                <li>Transform Origin</li>
+            </ul>
+        </section>
+        
+        <!-- End slides. -->
+        
+        <!-- Begin extension snippets. Add or remove as needed. -->
+        
+        <!-- deck.navigation snippet -->
+        <div aria-role="navigation">
+            <a href="#" class="deck-prev-link" title="Previous">&#8592;</a>
+            <a href="#" class="deck-next-link" title="Next">&#8594;</a>
+        </div>
+        
+        <!-- deck.status snippet -->
+        <p class="deck-status" aria-role="status">
+            <span class="deck-status-current"></span>
+            /
+            <span class="deck-status-total"></span>
+        </p>
+        
+        <!-- deck.goto snippet -->
+        <form action="." method="get" class="goto-form">
+            <label for="goto-slide">Go to slide:</label>
+            <input type="text" name="slidenum" id="goto-slide" list="goto-datalist">
+            <datalist id="goto-datalist"></datalist>
+            <input type="submit" value="Go">
+        </form>
+        
+        <!-- End extension snippets. -->
+    </div>
+    
+    <!-- Required JS files. -->
+    <script src="jquery.min.js"></script>
+    <script src="core/deck.core.js"></script>
+    
+    <!-- Extension JS files. Add or remove as needed. -->
+    <script src="extensions/menu/deck.menu.js"></script>
+    <script src="extensions/goto/deck.goto.js"></script>
+    <script src="extensions/status/deck.status.js"></script>
+    <script src="extensions/navigation/deck.navigation.js"></script>
+    <script src="extensions/scale/deck.scale.js"></script>
+    
+    <!-- Initialize the deck. You can put this in an external file if desired. -->
+    <script>
+    $(function() {
+        $.deck('.slide');
+    });
+</script>
+</body>
+</html>
