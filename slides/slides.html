@@ -28,7 +28,7 @@
     
     <link rel="stylesheet" media="screen" href="styles.css">
     
-    <link href="https://fonts.googleapis.com/css?family=Merriweather|Open+Sans" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
     
     <!-- Required Modernizr file -->
     <script src="modernizr.custom.js"></script>
@@ -40,6 +40,7 @@
         
         <section class="slide">
             <h1>Intro to CSS Transitions, </br>Transforms and Keyframes</h1>
+            <h4>Hannah Hudson</h4>
         </section>
         
         <section class="slide">
@@ -64,7 +65,7 @@
         </section>
         
         <section class='slide'>
-            <h2>How to Trigger a Change</h2>
+            <h1>How to Trigger a Change</h1>
             <img src="https://media.giphy.com/media/UUoV0yMKiO24M/giphy.gif"/>
             <ul>
                 <li>Hover</li>
@@ -84,7 +85,7 @@
         </section>
         
         <section class='slide'>
-            <h2>Transition Properties</h2>
+            <h1>Transition Properties</h1>
             <img src='https://media.giphy.com/media/bU6GKBpWaJ4tO/giphy.gif'/>
             <ul>
                 <li>Transition Delay</li>
@@ -100,7 +101,7 @@
         </section>
         
         <section class='slide'>
-            <h2>Transition Property</h2>
+            <h1>Transition Property</h1>
             <ul>
                 <li>The name of the property you want to transition</li>
                 <li>Helpful when transitioning multiple properties</li>
@@ -109,18 +110,23 @@
         </section>
         
         <section class='slide'>
-            <h2>Transition Timing Function</h2>
+            <h1>Transition Timing Function</h1>
             <img src='https://media.giphy.com/media/OQSvUTF3ONkIg/giphy.gif'/>
             <ul>
                 <li>Determines the in-between steps of the animation</li>
                 <li>Default value is "ease"</li>
                 <li><a href='https://cssreference.io/property/transition-timing-function/' target='_blank'>Examples</a></li>
-                <li><a href='http://cubic-bezier.com/#.17,.67,.83,.67' target='_blank'>Cubic Bezier</a></li>
             </ul>
+        </section>
+
+        <section class='slide'>
+            <h1>Cubic Bezier</h1>
+            <img src='https://media.giphy.com/media/os47fQL5t68pi/giphy.gif'/>
+            <p>Its possible to define our own transition timing functions with <a href='http://cubic-bezier.com/#.17,.67,.83,.67' target="_blank">Cubic Bezier</a></p>
         </section>
         
         <section class='slide'>
-            <h2>Transition Shorthand</h2>
+            <h1>Transition Shorthand</h1>
             <p>property, duration, timing-function, delay</p>
             <code>
                 transition: color, 2s, ease-in-out , 1s
@@ -129,17 +135,68 @@
         </section>
         
         <section class='slide'>
-            <h1>Transform Properties</h1>
+            <h1>Transforms</h1>
             <img src='https://media.giphy.com/media/SyqfOzwy6tZug/giphy.gif'/>
             <ul>
-                <li><a href='https://developer.mozilla.org/en-US/docs/Web/CSS/transform'>Complete List</a></li>
+                <li>Allow us to change an element</li>
+                <li>Can be triggered but not a requirement</li>
+            </ul>
+        </section>
+
+        <section class='slide'>
+            <h1>Properties</h1>
+            <ul>
                 <li>Rotate</li>
                 <li>Scale</li>
                 <li>Translate</li>
-                <li>Transform Origin</li>
+                <li><a href='https://developer.mozilla.org/en-US/docs/Web/CSS/transform'>Complete List</a></li>
             </ul>
         </section>
+
+        <section class='slide'>
+            <h1>Rotate</h1>
+            <code>transform: rotate(45deg);</code>
+
+        <div class='two-column-layout'>
+            <div class='rotated'></div>
+            <ul>
+                <li>Takes a positive or negative angle value (most commonly, degrees)</li>
+                <li>Also possible to split up X, Y and even Z axis. <a href='https://developer.mozilla.org/en-US/docs/Web/CSS/transform-function/rotateX' target='_blank'>Docs Here!</a></li>
+                <li>Transforming on hover needs a transition duration to work</li>
+        </ul>
+        </section>
+
+        <section class='slide'>
+                <h1>Scale</h1>
+                    <code>transition: scale(2)</code>
+                    <ul>
+                        <li>Takes one or two integer values</li>
+                        <li>One number assumes X and Y</li>
+                    </ul>
+            </section>
         
+        <section class='slide'>
+            <h1>Translate</h1>
+                <code>transition: translate(10px, 50px)</code>
+                    <ul>
+                        <li>Moves an element horizontally and/or vertically</li>
+                        <li>Takes measurement values such as pixels</li>
+                        <li>One number assumes the X value</li>
+                    </ul>        
+        </section>
+
+        <section class='slide'>
+            <h1>Multiple Transforms</h1>
+            <img src='https://media.giphy.com/media/ZTFhCLQfX3ZfO/giphy.gif'/></br>
+            <code>transform: scale(2) rotate(90deg);</code>
+            
+        </section>
+
+        <section class='slide'>
+            <h1>Keyframes</h1>
+            <img src='https://media.giphy.com/media/RccMM7hsUoW4w/giphy.gif'/>
+        </section>
+    
         <!-- End slides. -->
         
         <!-- Begin extension snippets. Add or remove as needed. -->

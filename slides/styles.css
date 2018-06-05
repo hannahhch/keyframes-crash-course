@@ -1,7 +1,7 @@
 body {
-    background-color: #574b90; 
+    background-color: #231C56; 
     color: #fff;
-    font-family: 'Merriweather', serif;
+    font-family: 'Source Sans Pro', sans-serif;
 }
 
 h1 {
@@ -28,8 +28,15 @@ img {
     margin: 0 auto;
 }
 
-a {
-    color: #ced6e0;
+a, h4 {
+    color: #6DCDBB;
+    text-decoration: none;
+}
+
+h4 {
+    text-transform: uppercase;
+    font-size: 30px;
+    margin-top: 0;
 }
 
 code {
@@ -54,7 +61,7 @@ img {
 
 .deck-status {
     font-size: 20px;    
-    color: white;
+    color: #6DCDBB;
 }
 
 .box {
@@ -73,8 +80,15 @@ img {
 }
 
 .two-column-layout {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin: 0 100px;
+}
+
+.rotated {
+    background-image: url('https://images.pexels.com/photos/736530/pexels-photo-736530.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=350');
+    height: 400px;
+    width: 400px;
+    background-position: center;
+    transform: rotate(45deg);
 }

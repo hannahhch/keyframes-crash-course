@@ -20,9 +20,10 @@ h1 {
     height: 100px;
     width: 100px;
     background-color: lightblue;
-    border-radius: 50%;
+    transition: transform 300ms linear;
 }
 
 .loader:hover {
-    background-color: purple;
+    transform: rotate(90deg);
+    background-color: grey;
 }
