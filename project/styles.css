@@ -16,14 +16,25 @@ h1 {
     align-items: center;
 }
 
+.loader--hidden {
+    display: none;
+}
+
 .loader {
     height: 100px;
     width: 100px;
     background-color: lightblue;
-    transition: transform 300ms linear;
+    animation: spin 4s infinite linear;
 }
 
-.loader:hover {
-    transform: rotate(90deg);
-    background-color: grey;
+
+
+@keyframes spin {
+    from {
+        transform: rotate(0);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
 }
