@@ -92,3 +92,24 @@ img {
     background-position: center;
     transform: rotate(45deg);
 }
+
+.cat--fade-in {
+    animation-name: fadeIn;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    height: 300px;
+    width: 300px;
+    background-size: cover;
+    background-position: center;
+    background-image: url('https://images.pexels.com/photos/225406/pexels-photo-225406.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260')
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
