@@ -74,32 +74,55 @@
                 <li>JavaScript Event (ex: click, window load)</li>
             </ul>
         </section>
+
+        <section class='slide'>
+            <h1>What Can We Change (Animate)?</h1>
+                <a href='http://leaverou.github.io/animatable/' target="_blank">
+                    <img src='images/animatble-examples.png'/>
+                </a>
+        </section>
+
+        <section class='slide'>
+            <h2>Let's start with hover</h2>
+            <img src="https://media.giphy.com/media/aNFmxymFRQzi8/giphy.gif"/>
+        </section>
         
         <section class='slide'>
             <h1>CSS Hover Psuedo Selector</h1>
-            <img src="https://media.giphy.com/media/aNFmxymFRQzi8/giphy.gif"/>
             <ul>
                 <li>The change happens immediately</li>
-                <li>No control over speed, duration, etc.</li>
+                <li>No control over speed, duration, timing etc.</li>
             </ul>
+        </section>
+
+        <section class='slide'>
+            <h1>Transition</h1>
+            <img src='https://media.giphy.com/media/bU6GKBpWaJ4tO/giphy.gif'/>
         </section>
         
         <section class='slide'>
             <h1>Transition Properties</h1>
-            <img src='https://media.giphy.com/media/bU6GKBpWaJ4tO/giphy.gif'/>
             <ul>
-                <li>Transition Delay</li>
                 <li>Transition Duration</li>
+                <li>Transition Delay</li>
                 <li>Transition Property</li>
                 <li>Transition Timing Function</li>
             </ul>
+
         </section>
-        
+
         <section class='slide'>
-            <h2><strong>Transition Delay</strong> - Delays the animation</h2>
-            <h2><strong>Transition Duration</strong> - Sets how long it will take the animation to complete</h2>
+            <h1>Transition Duration</h1>
+            <code>transition-duration: 1s;</code>
+            <p>This transition will take 1 second to finish</p>
         </section>
-        
+
+        <section class='slide'>
+                <h1>Transition Delay</h1>
+                <code>transition-delay: 300ms;</code>
+                <p>This code will waut 300 miliseconds before starting</p>
+        </section>
+
         <section class='slide'>
             <h1>Transition Property</h1>
             <ul>
@@ -113,7 +136,8 @@
             <h1>Transition Timing Function</h1>
             <img src='https://media.giphy.com/media/OQSvUTF3ONkIg/giphy.gif'/>
             <ul>
-                <li>Determines the in-between steps of the animation</li>
+                <li>Determines the in-between steps of the transition</li>
+                <li>Example: Does the animation start off slow and get faster?</li>
                 <li>Default value is "ease"</li>
                 <li><a href='https://cssreference.io/property/transition-timing-function/' target='_blank'>Examples</a></li>
             </ul>
@@ -131,7 +155,7 @@
             <code>
                 transition: color, 2s, ease-in-out , 1s
             </code>
-            <p>The only mandatory property is transition-duration!</p>
+            <p>The only 'mandatory' property is transition-duration!</p>
         </section>
         
         <section class='slide'>
@@ -139,7 +163,7 @@
             <img src='https://media.giphy.com/media/SyqfOzwy6tZug/giphy.gif'/>
             <ul>
                 <li>Allow us to change an element</li>
-                <li>Can be triggered but not a requirement</li>
+                <li>Can be triggered (hovered) but not a requirement</li>
             </ul>
         </section>
 
@@ -149,6 +173,7 @@
                 <li>Rotate</li>
                 <li>Scale</li>
                 <li>Translate</li>
+                <li>Skew</li>
                 <li><a href='https://developer.mozilla.org/en-US/docs/Web/CSS/transform'>Complete List</a></li>
             </ul>
         </section>
@@ -168,7 +193,7 @@
 
         <section class='slide'>
                 <h1>Scale</h1>
-                    <code>transition: scale(2)</code>       
+                    <code>transform: scale(2)</code>       
                     <ul>
                         <li>Takes one or two integer values</li>
                         <li>One number assumes X and Y</li>
@@ -178,12 +203,22 @@
         <section class='slide'>
             <h1>Translate</h1>
                 <img src='https://media.giphy.com/media/AKR2jRrJnADyU/giphy.gif'/></br>
-                <code>transition: translate(10px, 50px)</code>
+                <code>transform: translate(10px, 50px)</code>
                     <ul>
                         <li>Moves an element horizontally and/or vertically</li>
                         <li>Takes negative or positive measurement values such as pixels</li>
                         <li>One number assumes the X value</li>
                     </ul>        
+        </section>
+
+        <section class='slide'>
+            <h1>Skew</h1>
+                <code>transform: skew(20deg, 10deg);</code>
+                <ul>
+                    <li>Skews an element on the X and Y axis</li>
+                    <li>Takes one or two integer values</li>
+                    <li>One number assumes X</li>
+                </ul>
         </section>
 
         <section class='slide'>
@@ -197,13 +232,6 @@
             <h1>Keyframes</h1>
             <img src='https://media.giphy.com/media/RccMM7hsUoW4w/giphy.gif'/>
             <p>Lets us animate elements with or without a trigger event, </br>define steps in the animation and more! </p>
-        </section>
-
-        <section class='slide'>
-            <h1>What Can We Animate?</h1>
-                <a href='http://leaverou.github.io/animatable/' target="_blank">
-                    <img src='images/animatble-examples.png'/>
-                </a>
         </section>
 
         <section class='slide'>
@@ -231,9 +259,34 @@
                             <li>animation-iteration-count</li>
                             <li>animation-direction</li>
                             <li>animation-timing-function</li>
-                            <li>animation-direction</li>
                         </ul>
                 </div>
+        </section>
+
+        <section class='slide'>
+            <h1>Animation Property Examples</h1>
+            <table>
+                <tr>
+                    <td>animation-name: fadeIn</td>
+                    <td>What did we call our animation?</td>
+                </tr>
+                <tr>
+                    <td>animation-duration: 3s</td>
+                    <td>How long should it last?</td>
+                </tr>
+                <tr>
+                    <td>animation-iteration-count: infinite</td>
+                    <td>How many times should it play?</td>
+                </tr>
+                <tr>
+                    <td>animation-direction: reverse</td>
+                    <td>Which direction should it play?</td>
+                </tr>
+                <tr>
+                    <td>animation-timing-function: linear</td>
+                    <td>How should the speed be dispersed (see transition-timing-function)</td>
+                </tr>
+            </table>
         </section>
 
         <section class='slide'>
@@ -253,12 +306,12 @@
 
         <section class='slide'>
             <h2>Ideally our we should 'listen' for when the page has loaded</h2>
-                <img src='images/jswindow.png'/>
+                <img src='images/js-window.png'/>
         </section>
 
         <section class='slide'>
             <h2>We can cheat to make sure we see our animation</h2>
-            <img src='images/cheat.png'/>
+            <img src='images/js-timeout.png'/>
         </section>
 
         <section class='slide'>
@@ -266,6 +319,13 @@
             <img src='https://media.giphy.com/media/b9TLVAyi8U6wE/giphy.gif'/>
         </section>
     
+        <section class='slide'>
+            <h1>Resources</h1>
+                <ul>
+                    <li><a href='https://robots.thoughtbot.com/transitions-and-transforms'>CSS Transitions and Transforms for Beginners</a></li>
+                    <li><a href='https://developer.mozilla.org/en-US/docs/Web/CSS/animation'>Complete List of Animation Properties from MDN</a></li>
+                </ul>
+        </section>
         <!-- End slides. -->
         
         <!-- Begin extension snippets. Add or remove as needed. -->

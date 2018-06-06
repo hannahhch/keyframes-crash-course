@@ -1,3 +1,5 @@
+/* Main */
+
 body {
     background-color: #231C56; 
     color: #fff;
@@ -30,7 +32,11 @@ img {
 
 a, h4 {
     color: #6DCDBB;
-    text-decoration: none;
+}
+
+a:hover {
+    color: #fff;
+    transition: 1s;
 }
 
 h4 {
@@ -51,6 +57,20 @@ img {
 
 }
 
+table, td {
+    border: solid 1px white;
+    border-collapse: collapse;
+    padding: 10px;
+    font-size: 30px;
+}
+
+td:first-of-type {
+    background-color: white;
+    color:  #231C56;
+    border: solid 1px #231C56;
+}
+
+/* Desk JS */
 .deck-slide-scaler {
     display: flex;
     flex-direction: column;

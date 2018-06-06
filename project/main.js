@@ -1,8 +1,10 @@
-setTimeout(function() {
-  document.getElementById('loader').className += ' loader--hidden';
+/* setTimeout(function() {
+    var loader = document.getElementById('loader');
+    loader.classList.remove('loader');
 }, 2000); 
 
 
 window.onload = function() {
-    document.getElementById('loader').className += ' loader--hidden';
-}; 
+    var loader = document.getElementById('loader');
+    loader.classList.remove('loader');
+}; */
